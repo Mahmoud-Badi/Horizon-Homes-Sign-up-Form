@@ -7,7 +7,7 @@ A single-page sign-up form for a fictional real estate company called Horizon Ho
 
 ## Live Demo
 
-[View Live Demo](http://mahmoud-badi.github.io/Horizon-Homes-Sign-up-Form.io)
+[View Live Demo](https://mahmoud-badi.github.io/Horizon-Homes-Sign-up-Form/)
 
 
 The page has a full-width hero image (the lake house photo), a compact header with the logo and a few placeholder icons, and a form on the right. Fields include name, email, phone, preferred date/time, property type, and password with confirmation. When a field is valid you get a green check on the right; on submit you see a short success message (“account created and appointment confirmed”) and the form clears. No backend—everything is client-side HTML, CSS, and JS.
