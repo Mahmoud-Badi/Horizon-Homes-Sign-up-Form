@@ -2,7 +2,7 @@
 
 A single-page sign-up form for a fictional real estate company called Horizon Homes. Built as part of [The Odin Project](https://www.theodinproject.com/) curriculum.
 
-![Screenshot of the sign-up page](screenshot.png)
+![Screenshot of the sign-up page](HH-site.png)
 
 
 ## Live Demo
