@@ -1,0 +1,252 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: 'Source Sans 3', system-ui, sans-serif; background: #FDF8F3; }
+
+.page-wrapper { min-height: 100vh; }
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  background-image: url('Horizon Homes.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(253, 248, 243, 0.35);
+  z-index: 0;
+}
+
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 0.4rem 1rem;
+  background: rgba(253, 248, 243, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-spacer {
+  width: 64px;
+  flex-shrink: 0;
+}
+
+.logo {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Source Sans 3', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+  color: #1d1d1f;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #1d1d1f;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.header-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.header-icon:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.header-icon:active {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.content-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) minmax(300px, 1.2fr);
+  min-height: 100vh;
+  align-items: stretch;
+}
+
+.sidebar {
+  display: flex;
+  align-items: stretch;
+}
+
+.sidebar-image {
+  width: 100%;
+  min-height: 240px;
+  background-image: url('Horizon Homes.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  background: #FDF8F3;
+  position: relative;
+}
+
+.success-notification {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%, 8px);
+  width: 100%;
+  max-width: 340px;
+  padding: 0.6rem 0.75rem;
+  background: #596D48;
+  color: #fff;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+}
+
+.success-notification.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  visibility: visible;
+}
+
+.signup-form {
+  width: 100%;
+  max-width: 340px;
+}
+
+.form-title {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0 0 0.6rem;
+  color: #2c2a28;
+}
+
+.form-group {
+  margin-bottom: 0.45rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #4a4744;
+  margin-bottom: 0.15rem;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.input-wrap .form-input {
+  padding-right: 1.6rem;
+}
+
+.input-check {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #596D48;
+  font-size: 0.9rem;
+  font-weight: 700;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.input-wrap.is-valid .input-check {
+  opacity: 1;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.35rem 0.5rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  border: 1px solid #E8E2D9;
+  border-radius: 5px;
+  background: #FFFEFC;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input::placeholder { color: #9a958d; }
+
+.form-input:focus {
+  outline: none;
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.form-input.touched:invalid {
+  border-color: #DC2626;
+}
+
+.form-input.form-select {
+  cursor: pointer;
+  appearance: auto;
+}
+
+.btn-submit {
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.5rem 0.75rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #596D48;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.btn-submit:hover { filter: brightness(1.05); }
+.btn-submit:active { filter: brightness(0.98); }
+
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+  .sidebar-image { min-height: 180px; }
+}
